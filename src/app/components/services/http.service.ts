@@ -7,7 +7,7 @@ import { APIResponse, Game } from 'src/app/models';
 
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HttpService {
 
@@ -18,10 +18,11 @@ export class HttpService {
   ):Observable<APIResponse<Game>>{
     let params = new HttpParams().set('ordering',ordering);
     if (search){
-      params = new HttpParams().set("ordering",ordering).set('search',search);
+      params = params.set('search',search);
     }
-    return this.http.get<APIResponse<Game>>(`${env.BASE_URL}/games`,{
+    return this.http.get<APIResponse<Game>>(`${env.BASE_URL}`,{
       params:params,
-    });
+    }
+    );
   }
 }

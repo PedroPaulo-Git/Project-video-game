@@ -2,7 +2,7 @@
 &-container{
     width: 100%;
     height: 60px;
-    background-color: rgb(196, 196, 196);
+    background-color: #001e27;
     display: flex;
     position:fixed;
     top: 0;
@@ -12,9 +12,25 @@
     z-index: 4;
 }
 &-form{
+    display: flex;
+    align-items: center;
+    text-align: center;
     width: 100%;
     margin: 0;
+    top: 0;
     max-width: 100%;
+    position: relative;
+    height: 60px;
 }
 
+}
+.logo{
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 60px;
+}
+span img{
+    width: 100px;
+    cursor: pointer;
 }

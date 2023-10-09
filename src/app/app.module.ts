@@ -12,14 +12,18 @@ import { HomeComponent } from './components/home/home.component';
 import { HttpHeadersInterceptor } from './interceptors/http-headers.interceptor';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpErrorsInterceptor } from './interceptors/http-errors.interceptor';
+import { DetailsComponent } from './details/details.component';
+import { GaugeModule } from 'angular-gauge'
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchBarComponent,
-    HomeComponent
+    HomeComponent,
+    DetailsComponent
   ],
   imports: [
+    GaugeModule.forRoot(),
     HttpClientModule,
     MatSelectModule,
     MatFormFieldModule,
